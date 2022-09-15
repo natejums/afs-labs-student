@@ -25,4 +25,4 @@ spec:
         name: db-deployment
         image: harbor.dev.afsmtddso.com/njumaili-harbor-project/db@sha256:8a42cc70144996db971f5298394a4ed5d230cfc50cf14d3d4394c98768bb0484
         ports:
-        - containerPort:5432
+        - containerPort: 5432
