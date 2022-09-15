@@ -4,7 +4,7 @@ metadata:
   name: db-service
   namespace: njumaili
 spec:
-  type: CluterIP
+  type: ClusterIP
   selector:
     app: db
   ports:
