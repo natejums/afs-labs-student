@@ -213,14 +213,14 @@ def show_account():
 def show_locations():
     """Show local pickup locations"""
 
-if os.environ["LOCATION_FEATURE_ENABLED"] == "True":
-    pickups = db.session.query(Pickup).filter(Pickup.pickup_id > 1).all()
-    return render_template("locations.html", pickups=pickups)
-    
-else:
-    return render_template("coming-soon.html")
-#    pickups = db.session.query(Pickup).filter(Pickup.pickup_id > 1).all()
-#    return render_template("locations.html", pickups=pickups)
+    if os.environ["LOCATION_FEATURE_ENABLED"] == "True":
+        pickups = db.session.query(Pickup).filter(Pickup.pickup_id > 1).all()
+        return render_template("locations.html", pickups=pickups)
+        
+    else:
+        return render_template("coming-soon.html")
+    #    pickups = db.session.query(Pickup).filter(Pickup.pickup_id > 1).all()
+    #    return render_template("locations.html", pickups=pickups)
 
 
 @app.route('/cart')
